@@ -1,4 +1,45 @@
 .link{
-    color: #fff;
-    font:bold;
+    color: #fff !important;
+    font-weight: 300 !important;
+    font-size: small !important;
+  }
+
+  .brand{
+    display: flex;
+  }
+  .brand img{
+    width: 100px;
+    height: 100px;;
+  }
+
+
+
+  .school{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  .name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  .location{
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: #FFF;
+  }
+
+  @media (max-width: 1024px) {
+    .brand img{
+        width: 60px;
+        height: 60px;;
+      }
+
+      .name{
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    
   }
