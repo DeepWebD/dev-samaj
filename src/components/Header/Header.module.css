@@ -1,8 +1,16 @@
-.header{
+/* .header{
     position: absolute;
     width: 100%;
     z-index: 3;
-    background-color:rgb(255 69 0 / 60%)
+   
+} */
+
+.navbar{
+    background-color:rgb(255 69 0 / 90%)
+}
+
+.transpparent{
+    background-color:rgb(255 69 0 / 0%)
 }
 
 .link{
