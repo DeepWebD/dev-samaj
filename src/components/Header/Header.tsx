@@ -6,7 +6,7 @@ import styled from "./Header.module.css";
 import Logo from "../../assets/image/logo.png";
 function Header() {
   return (
-    <div style={{ position: "absolute", width: "100%", zIndex: "3", backgroundColor:'rgb(255 69 0 / 60%)' }}>
+    <div  className={styled.header}>
       <Navbar expand="lg">
         <Container style={{maxWidth:'96%'}}>
           <Navbar.Brand
