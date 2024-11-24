@@ -12,7 +12,7 @@ const NavbarCard = (subNavbarData: any) => {
   }, [subNavbarData]);
 
   const listItem = subNavbarData.subNavbarData.map((item: NavbarData) => {
-    return <div id={item.id}>{item.text}</div>;
+    return <div id={item.id} className={activeTab===item.id?styles.active:''}>{item.text}</div>;
   });
 
   const cardContent = subNavbarData.subNavbarData.map((item: NavbarData) => {
@@ -33,7 +33,7 @@ const NavbarCard = (subNavbarData: any) => {
    
   };
   return (
-    <div className={styles.navbarCard}>
+    <div className={`${styles.navbarCard} shadow-lg`}>
       <div
         className={styles.navbarCardList}
         onClick={(e) => tabClickHandler(e)}

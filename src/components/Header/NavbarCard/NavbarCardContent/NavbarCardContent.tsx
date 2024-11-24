@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './NavbarCardContent.module.css'
-import exp from 'constants'
+
 
 interface NavbarCardContentProps {
     title:string,
