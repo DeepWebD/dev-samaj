@@ -1,0 +1,33 @@
+.navbarCard{
+    display: flex;
+      width: 800px;
+      height: 300px;
+      flex-direction: row;
+      position: fixed;
+      z-index: 11;
+      color: white;
+      top: 90px;
+      background-color: #FFF;
+      right: 150px;
+  }
+
+  .navbarCardList{
+    display: flex;
+    flex-direction: column;
+   padding: 20px;
+   color: black;
+   border-right: 3px solid orange;
+   width: 200px;
+  }
+
+  .navbarCardList div{
+    margin: 10px 0px;
+  }
+  
+  .navbarCardContainer{
+  
+}
+.active{
+    color: orange;
+    font-weight: bold;
+}

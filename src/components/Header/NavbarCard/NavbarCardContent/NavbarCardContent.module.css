@@ -1,0 +1,26 @@
+.navbarCardContent {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    width: 600px;
+    color: black;
+    justify-content: space-between;
+    height: 300px;
+  
+}
+
+.textContent{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.desc{
+    margin: 20px 20px 0px 0px;
+    font-size: small;
+}
+
+.imageContent{
+    display: flex;
+     align-items: center;
+}

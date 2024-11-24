@@ -3,8 +3,8 @@ import Image from "react-bootstrap/Image";
 import banner1 from "../../assets/image/banner1.jpg";
 import banner2 from "../../assets/image/banner2.jpg";
 import banner3 from "../../assets/image/banner3.jpg";
-
 import styles from "./Carousel.module.css";
+
 function Slider() {
   return (
     <div>
@@ -20,6 +20,7 @@ function Slider() {
               objectFit: "cover",
             }}
           />
+         
           <Carousel.Caption className={styles.caption}>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

@@ -1,33 +1,30 @@
-/* .header{
-    position: absolute;
-    width: 100%;
-    z-index: 3;
-   
-} */
-
-.navbar{
-    background-color:rgb(255 69 0 )
-}
 
 .transpparent{
     background-color:rgb(255 69 0 / 0%)
 }
 
 .link{
-    color: #fff !important;
-    font-weight: 300 !important;
+    color: rgb(255 69 0 ) !important;
+    font-weight: 500 !important;
     font-size: small !important;
+  }
+
+  .link > a{
+    color: rgb(255 69 0) !important;
+    font-weight: 500 !important;
+    font-size: small !important;
+  
   }
 
   .brand{
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
-  .brand img{
-    width: 100px;
-    height: 100px;;
+  .brandImg{
+    width: 60px;
+    height: 60px;;
   }
-
-
 
   .school{
     display: flex;
@@ -38,16 +35,39 @@
   .name{
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: rgb(255 69 0 );
   }
   .location{
     font-size: 0.8rem;
     font-weight: 200;
-    color: #FFF;
+    color: rgb(255 69 0);
+  }
+ /* Navbar on Scroll */
+  .navbarScrolled {
+    background-color:#FFF;
+    transition: background-color 600ms linear;
+
+  }
+  .navbarBrandScrolled{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
   }
 
-  @media (max-width: 992px) {
-    .brand img{
+  .navbarBrandImgScrolled{
+    width: 60px;
+    height: 60px;;
+  }
+
+  a:hover{
+    color: rgb(255 69 0) !important;
+    transition: color 300ms linear;
+    transition: font-weight 600ms linear;
+  }
+
+
+  @media (max-width: 1199px) {
+    .brandImg{
         width: 60px;
         height: 60px;;
       }
@@ -57,8 +77,42 @@
         font-weight: bold;
       }
       .header{
-       
-        background-color:rgb(255 69 0 / 99%)
+        
+        background-color:#FFF
     }
+    .link > a{
+      color: rgb(255 69 0 ) !important;
+      font-weight: 500 !important;
+      font-size: small !important;
+    }
+  
     
   }
+
+  @media (min-width: 1200px) {
+    .link{
+     
+      border-right: 1px solid  #FFF!important;
+
+    }
+
+  }
+
+/* CustomTabs.module.css */
+
+.customTabs{
+  flex-direction: column !important;
+  border-right: 2px solid orange !important;
+  width: 160px !important;
+  font-size: small !important;
+
+}
+.customTabs button {
+  border: none !important;
+}
+
+/* .customTabs ul {
+  border-right:2px solid orange !important;
+} */
+
+
