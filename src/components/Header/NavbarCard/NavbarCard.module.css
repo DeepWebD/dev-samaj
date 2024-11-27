@@ -30,8 +30,7 @@
   
 
 .active{
-    /* background-color: orange;
-    color: #FFF; */
+    
     color: orange;
     font-weight: bold;
     border-left:2px solid orange;

@@ -14,9 +14,7 @@ function Header() {
   const [colorChange, setColorchange] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [showCard, setShowCard] = useState(false);
-  // const [activeNav,setActiveNav]=useState('')
   const [subNavbarData, setSubNavbarData] = useState<Array<NavbarData>>([]);
-  // const [subNavbarData, setSubNavbarData] = useState([]);
   const navbarCardRef = useRef<HTMLDivElement>(null);
 
   const handleNavHover = (e: any) => {
@@ -35,8 +33,8 @@ function Header() {
       navbarCardRef.current &&
       !navbarCardRef.current.contains(event.target as Node)
     ) {
-      console.log("Clicked outside NavbarCard");
       setShowCard(false);
+      setSubNavbarData([]);
     }
   };
 
@@ -58,20 +56,28 @@ function Header() {
     setScreenWidth(window.innerWidth);
   };
 
+  //scroll controller
   window.addEventListener("resize", handleResize);
   window.addEventListener("scroll", changeNavbarColor);
   let bgColor = styled.transpparent;
   let navbarBrand = styled.brand;
   let navbarBrandImg = `d-inline-block align-top ${styled.brandImg}`;
   let navbarSchool = styled.school;
+  let navLike = styled.link;
+  let schoolName = styled.name;
+  let schoolLocation = styled.location;
   if (colorChange || screenWidth < 1200) {
     bgColor = styled.navbarScrolled;
     navbarBrand = styled.navbarBrandScrolled;
     navbarBrandImg = `d-inline-block align-top ${styled.navbarBrandImgScrolled}`;
+    navLike = styled.linkScrolled;
+    schoolName = styled.nameSrolled;
+    schoolLocation = styled.locationSrcolled;
   }
 
   return (
     <div>
+      {/* Navbar Card */}
       <div
         style={{ display: showCard && screenWidth > 1200 ? "block" : "none" }}
       >
@@ -90,12 +96,12 @@ function Header() {
           <Navbar.Brand href="#home" className={navbarBrand}>
             <img alt="" src={Logo} className={navbarBrandImg} />
             <div className={navbarSchool}>
-              <div className={styled.name}>Dev Samaj School</div>
-              <div className={styled.location}>Sukhdev Vihar(New Delhi)</div>
+              <div className={schoolName}>Dev Samaj School</div>
+              <div className={schoolLocation}>Sukhdev Vihar(New Delhi)</div>
             </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
+          <Navbar
             id="basic-navbar-nav"
             className="justify-content-end"
           >
@@ -104,7 +110,7 @@ function Header() {
                 return (
                   <Nav.Link
                     href={`#${item.id}`}
-                    className={`${styled.link} px-3`}
+                    className={navLike}
                     key={item.id}
                     id={item.id}
                     onMouseEnter={handleNavHover}
@@ -113,8 +119,12 @@ function Header() {
                   </Nav.Link>
                 );
               })}
+              <div className="d-flex mx-3">
+                <button className={styled.login}> Login</button>
+                <button className={styled.contact}>Contact</button>
+              </div>
             </Nav>
-          </Navbar.Collapse>
+          </Navbar>
         </Container>
       </Navbar>
 
@@ -140,39 +150,40 @@ function Header() {
             className="justify-content-end"
           >
             <Nav>
-              <Nav.Link href="#aboutus" className={`${styled.link} px-3`}>
-                ABOUT US
-              </Nav.Link>
-              <Nav.Link href="#MPD" className={`${styled.link} px-3`}>
-                MPD
-              </Nav.Link>
-              {/* <Nav.Link href="#parent" className={`${styled.link} px-3`}>
-                PARENTS
-              </Nav.Link> */}
-              <NavDropdown title="PARENTS" id="navbarScrollingDropdown" className={`${styled.link} px-3`}>
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#events" className={`${styled.link} px-3`}>
-                EVENTS
-              </Nav.Link>
-              <Nav.Link href="#gallery" className={`${styled.link} px-3`}>
-                GALLERY
-              </Nav.Link>
-              <Nav.Link href="#contactus" className={`${styled.link} px-3`}>
-                CONTACT US
-              </Nav.Link>
-              <Nav.Link href="#registration" className={`${styled.link} px-3`}>
-                REGISTRATION
-              </Nav.Link>
-              <Nav.Link href="#history" className={`${styled.link} px-3`}>
-                HISTORY
-              </Nav.Link>
-              <Nav.Link href="#login" className={`${styled.link} px-3`}>
-                LOGIN
-              </Nav.Link>
+              {navbarData.map((item) => {
+                if (item.subNavbar !== null) {
+                  return (
+                    <NavDropdown
+                      title={item.text}
+                      key={item.id}
+                      className={styled.navLink}
+                    >
+                      {item.subNavbar.map((subItem) => {
+                        return (
+                          <NavDropdown.Item
+                            key={subItem.id}
+                            className={styled.dropdownItem}
+                          >
+                            {subItem.text}
+                          </NavDropdown.Item>
+                        );
+                      })}
+                    </NavDropdown>
+                  );
+                } else if (item.subNavbar === null) {
+                  return (
+                    <Nav.Link href={`${item.id}`} className={styled.navLink}>
+                      {item.text}
+                    </Nav.Link>
+                  );
+                }
+              })}
+              <Nav.Link href='#login' className={styled.navLink}>
+                      Login
+                    </Nav.Link>
+                    <Nav.Link href='#contact' className={styled.navLink}>
+                      Contact
+                    </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -182,44 +193,3 @@ function Header() {
 }
 
 export default Header;
-
-// commented code for dropdown
-
-{
-  /* <Nav>
-<NavDropdown
-  title="ABOUT US"
-  id="nav-dropdown"
-  className={`${styled.link} px-3`}
->
-  <div
-    style={{ width: "550px", height: "200px", opacity: "0.8",display:'flex' }}
-  >
-
-    <Tabs
-      defaultActiveKey="home"
-      id="custom-tabs"
-      className={styled.customTabs}
-    >
-      <Tab eventKey="ABOUT_DEV_SAMAJ" title="ABOUT DEV SAMAJ" >
-        <div className={styled.tabContent}>
-          <h2>ABOUT DEV SAMAJ</h2>
-          <p>This is the content for the Home tab.</p>
-        </div>
-      </Tab>
-      <Tab eventKey="PHOTO_GALERY" title="PHOTO GALERY">
-        <div className={styled.tabContent}>
-          <h2>PHOTO GALERY</h2>
-          <p>This is the content for the Profile tab.</p>
-        </div>
-      </Tab>
-      <Tab eventKey="VIDEO_GALLERY" title="VIDEO GALLERY">
-        <div className={styled.tabContent}>
-          <h2>VIDEO GALLERY</h2>
-          <p>This is the content for the Contact tab.</p>
-        </div>
-      </Tab>
-    </Tabs>
-  </div>
-</NavDropdown> */
-}

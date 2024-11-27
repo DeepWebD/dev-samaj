@@ -4,15 +4,16 @@
 }
 
 .link{
-    color: rgb(255 69 0 ) !important;
+    color: #FFF !important;
     font-weight: 500 !important;
-    font-size: small !important;
+    font-size: medium !important;
+    padding: 2px 16px !important;
   }
 
   .link > a{
-    color: rgb(255 69 0) !important;
+    color: #FFF !important;
     font-weight: 500 !important;
-    font-size: small !important;
+    font-size: medium !important;
   
   }
 
@@ -35,17 +36,17 @@
   .name{
     font-size: 1.5rem;
     font-weight: bold;
-    color: rgb(255 69 0 );
+    color: #FFF;
   }
   .location{
     font-size: 0.8rem;
     font-weight: 200;
-    color: rgb(255 69 0);
+    color: #FFF;
   }
  /* Navbar on Scroll */
   .navbarScrolled {
     background-color:#FFF;
-    transition: background-color 600ms linear;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   }
   .navbarBrandScrolled{
@@ -53,66 +54,89 @@
     flex-direction: row;
     align-items: left;
   }
-
+  .linkScrolled{
+    color: #000 !important;
+    font-weight: 500 !important;
+    font-size: medium !important;
+    border-right: 1px solid  orange!important;
+    padding: 2px 16px !important;
+  }
   .navbarBrandImgScrolled{
     width: 60px;
     height: 60px;;
   }
 
-  a:hover{
-    color: rgb(255 69 0) !important;
+  .nameSrolled{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+  }
+  .locationSrcolled{
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: #000;
+  }
+  .link:hover{
+    color: orange !important;
     transition: color 300ms linear;
     transition: font-weight 600ms linear;
   }
 
 
+  /* mobile navbar */
   @media (max-width: 1199px) {
-    .brandImg{
-        width: 60px;
-        height: 60px;;
-      }
-
-      .name{
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
-      .header{
-        
-        background-color:#FFF
+  .name{
+    color: orange !important;
+  }
+  .location{
+    color: #000 !important
+  }
+   .navLink{
+      color: black !important;
+      padding: 5px 10px !important;
     }
-    .link > a{
-      color: rgb(255 69 0 ) !important;
-      font-weight: 500 !important;
-      font-size: small !important;
+    .navLink a::after{
+      float: right !important;
     }
-  
-    
+    .navLink a{
+      color: black !important;
+     
+    }
+    .navLink:hover{
+      background-color: orange !important;
+      transition: color 300ms linear;
+      transition: font-weight 600ms linear;
+    }
+    .dropdownItem:hover{
+      color: orange !important;
+      background-color: transparent !important;
+    }
   }
 
   @media (min-width: 1200px) {
     .link{
-     
-      border-right: 1px solid  #FFF!important;
-
+      border-right: 1px solid  #FFF!important
     }
 
   }
 
-/* CustomTabs.module.css */
+  /* Login and Contact Us buttons */
 
-.customTabs{
-  flex-direction: column !important;
-  border-right: 2px solid orange !important;
-  width: 160px !important;
-  font-size: small !important;
-
-}
-.customTabs button {
-  border: none !important;
-}
-
-/* .customTabs ul {
-  border-right:2px solid orange !important;
-} */
-
-
+  .login{
+    background-color: orange;
+    color: #FFF;
+    font-weight: 700;
+    font-size: medium;
+    padding: 8px 45px ;
+    border-radius: 20px 0px 0px 20px;
+    border: none;
+  }
+  .contact{
+    background-color: #000;
+    color: #FFF;
+    font-weight: 700;
+    font-size: medium;
+    padding: 8px 45px;
+    border-radius: 0px 20px 20px 0px;
+    border: none;
+  }

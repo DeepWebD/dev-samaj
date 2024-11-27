@@ -19,6 +19,7 @@ const NavbarCard = (subNavbarData: any) => {
     return (
       <div style={{ display: activeTab == item.id ? "block" : "none" }}>
         <NavbarCardContent
+          id={item.id}
           title={item.text}
           desc={item.desc}
           images={[item.image]}
@@ -43,6 +44,7 @@ const NavbarCard = (subNavbarData: any) => {
       <div className={styles.navbarCardContainer}>
         {cardContent}
       </div>
+     
     </div>
   );
 };

@@ -3,11 +3,18 @@ import styles from './NavbarCardContent.module.css'
 
 
 interface NavbarCardContentProps {
+    id:string,
     title:string,
     desc:string,
     images:[string]
 }
- const NavbarCardContent = ({title='',desc='',images=['']}:NavbarCardContentProps) => {
+ const NavbarCardContent = ({id='',title='',desc='',images=['']}:NavbarCardContentProps) => {
+    const handleButtonClick = (sectionId:string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
   return (
     <div className={styles.navbarCardContent}>
         <div className={styles.textContent}>
@@ -16,6 +23,9 @@ interface NavbarCardContentProps {
             </div>
             <div className={styles.desc}>
                 {desc}
+            </div>
+            <div>
+                <button  onClick={() => handleButtonClick('aboutDevSamaj')} >See More</button>
             </div>
         </div>
         <div className={styles.imageContent}>

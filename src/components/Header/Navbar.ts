@@ -71,10 +71,6 @@ const navbarData = [
             image: "https://5.imimg.com/data5/PS/AK/UO/SELLER-1469653/school-and-college-events.jpg"
         }]
     },{
-        id:'contactus',
-        text: "Contact Us",
-        subNavbar:null
-    },{
         id:'registration',
         text: "Registration",
         subNavbar:[
@@ -93,11 +89,12 @@ const navbarData = [
     },{
         id:'history',
         text: "History",
-        subNavbar:null
-    },{
-        id:'login',
-        text: "Login",
-        subNavbar:null
+        subNavbar:[{
+          id:'history',
+          text: "History",
+          desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus euismod, ultricies mi nec, tincidunt nunc',
+          image:'https://media.istockphoto.com/id/1094210238/vector/hand-drawn-history-doodles-with-lettering.jpg?s=612x612&w=0&k=20&c=ZGiZ0_xrEhJMG673M1rTGM8vTR10Ktj5GjGWKnNfMNE='
+      }]
     }
 
   ];
