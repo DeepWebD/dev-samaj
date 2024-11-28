@@ -1,24 +1,23 @@
-import { text } from "stream/consumers";
 
 
 const navbarData = [
     {
-      id: 'aboutus',
+      id: 'about',
       text: "About Us",
       subNavbar: [{
-        id: 'aboutDevSamaj',
+        id: 'devSamaj',
         text: "About Dev Samaj",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus euismod, ultricies mi nec, tincidunt nunc",
         image: "https://devsamajschools.com/images/Principal.jpg"
       },
       {
-        id: 'imageGallery',
+        id: 'images',
         text: "Image Gallery",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus euismod, ultricies mi nec, tincidunt nunc",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtsBg20mg8unoybeoxUCeJVJPqUiOy3Cx4Sg&s"
       },
       {
-        id: 'videoGallery',
+        id: 'video',
         text: "Video Gallery",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus euismod, ultricies mi nec, tincidunt nunc",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREe2EqdlWW7T1ds2-m1UMBXGwP8Y55XNpkcA&s"
@@ -28,7 +27,7 @@ const navbarData = [
       id: 'mpd',
       text: "MPD",
       subNavbar: [{
-        id: 'CBSC_Mandatory_disclosure',
+        id: 'mandatory',
         text: "CBSC Mandatory disclosure",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus euismod, ultricies mi nec, tincidunt nunc",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7JEPgpgSs4gnoYWpWjbdzJOmHwUREQw25CA&s"
@@ -80,7 +79,7 @@ const navbarData = [
                 desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus euismod, ultricies mi nec, tincidunt nunc',
                 image:'https://www.gbtps.org/wp-content/uploads/2023/01/3fe01aca-29a7-4b2a-8fb2-c8bf843f7c35.png'
             },{
-                id:'registrationForm',
+                id:'registration',
                 text: "Registration Form",
                 desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus euismod, ultricies mi nec, tincidunt nunc',
                 image:'https://3.files.edl.io/1e3b/19/08/15/173429-2b6a26a0-be1e-4139-9333-1c4f81c30b8d.png'

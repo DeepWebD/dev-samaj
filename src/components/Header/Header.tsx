@@ -101,15 +101,11 @@ function Header() {
             </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar
-            id="basic-navbar-nav"
-            className="justify-content-end"
-          >
+          <Navbar id="basic-navbar-nav" className="justify-content-end">
             <Nav>
               {navbarData.map((item) => {
                 return (
                   <Nav.Link
-                    href={`#${item.id}`}
                     className={navLike}
                     key={item.id}
                     id={item.id}
@@ -120,8 +116,8 @@ function Header() {
                 );
               })}
               <div className="d-flex mx-3">
-                <button className={styled.login}> Login</button>
-                <button className={styled.contact}>Contact</button>
+                <a href="#login" className={styled.login}> Login</a>
+                <a href="#contact" className={styled.contact}>Contact</a>
               </div>
             </Nav>
           </Navbar>
@@ -178,12 +174,12 @@ function Header() {
                   );
                 }
               })}
-              <Nav.Link href='#login' className={styled.navLink}>
-                      Login
-                    </Nav.Link>
-                    <Nav.Link href='#contact' className={styled.navLink}>
-                      Contact
-                    </Nav.Link>
+              <Nav.Link href="#login" className={styled.navLink}>
+                Login
+              </Nav.Link>
+              <Nav.Link href="#contact" className={styled.navLink}>
+                Contact
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

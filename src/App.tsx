@@ -1,26 +1,29 @@
 import Slider from "./components/Carousel/carousel";
 import Header from "./components/Header/Header";
-import AboutUs from "./components/AboutUs/AboutUs";
+import AboutDevSamaj from "./components/AboutDevSamaj/AboutDevSamaj";
 import ContactUs from "./components/ContactUs/ContactUs";
 import './App.css';
 import Footer from "./components/Footer/Footer";
+import Images from "./components/Images/Images";
 function App() {
 
   return (
     <>
-      <section id="home" style={{ position: "relative" }}>
+      <section id="home" >
         <Header />
         <Slider />
       </section>
-      <section id="test">
-        <AboutUs />
+      <section id="devSamaj">
+        <AboutDevSamaj />
       </section>
-      <section id="aboutDevSamaj">
-        <ContactUs />
+      <section id="images">
+        <Images />
       </section>
-      <section id="contact">
+
+      <section id="footer">
         <Footer />
       </section>
+    
 
     </>
   );

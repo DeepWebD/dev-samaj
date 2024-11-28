@@ -4,8 +4,8 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 const ContactUs = () => {
   return (
-    <Container>
-      <Row className="my-5">
+    <Container style={{height:'100vh'}}>
+      <Row >
         <Col>
           <h1>Contact Us</h1>
           <p>

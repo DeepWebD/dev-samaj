@@ -4,7 +4,7 @@ import './Footer.css'; // Import custom CSS for additional styling
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white mt-5 p-4">
+    <footer className="bg-dark text-white mt-5 p-4 ">
       <Container>
         <Row>
           <Col md="4">

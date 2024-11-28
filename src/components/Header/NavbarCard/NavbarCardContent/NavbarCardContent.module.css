@@ -24,3 +24,19 @@
     display: flex;
      align-items: center;
 }
+
+
+.customButton{
+    border:2px solid orange !important;
+    color :#000 !important;
+    background-color: #FFF !important;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease !important;
+}
+
+.customButton:hover{
+    border:2px solid orange !important;
+    background-color: orange !important;
+    color: #FFF !important;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease !important;
+    transform: translateX(2px);
+}

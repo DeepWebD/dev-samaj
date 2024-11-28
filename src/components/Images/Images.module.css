@@ -1,0 +1,10 @@
+.imageGallery{
+    /* height: 100vh; */
+}
+
+.imageGallery img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    padding: 10px;
+}

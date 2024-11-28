@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './NavbarCardContent.module.css'
+import { Button } from 'react-bootstrap'
 
 
 interface NavbarCardContentProps {
@@ -25,7 +26,10 @@ interface NavbarCardContentProps {
                 {desc}
             </div>
             <div>
-                <button  onClick={() => handleButtonClick('aboutDevSamaj')} >See More</button>
+            <Button  className={styles.customButton} onClick={() => handleButtonClick(id)} >See More</Button>
+            {/* <a href={`#${id}`} className={styles.customButton}  >See more</a> */}
+               {/* {id==='about'?<a href='#aboutUs' className={styles.customButton}  >See more</a>:<a className={styles.customButton}  href='#contact'>See more</a>}
+                <Button  className={styles.customButton} onClick={() => handleButtonClick('about')} >See More</Button> */}
             </div>
         </div>
         <div className={styles.imageContent}>
